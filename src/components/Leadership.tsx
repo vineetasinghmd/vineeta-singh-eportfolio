@@ -1,141 +1,136 @@
 import React from 'react';
-import { Users, BookOpen, CheckCircle2, HeartHandshake, Shield, Sparkles } from 'lucide-react';
+import { Users, BookOpen, HeartHandshake, Shield, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const Leadership: React.FC = () => {
-  const leadershipRoles = [
+  const roles = [
     {
-      title: 'Teaching Assistant — Immunology Lab',
-      org: 'College of Natural Sciences, The University of Texas at Austin',
-      period: 'August 2026 – Present',
-      category: 'STEM Education & Mentorship',
-      bullets: [
-        'Support undergraduate students as they learn fundamental immunology concepts and experimental laboratory techniques.',
-        'Guide students through laboratory activities and foster confidence in scientific problem-solving.',
-        'Translate complex scientific concepts into accessible explanations for students with varying levels of prior exposure.',
-        'Develop leadership and communication skills through active teaching and academic mentorship.'
-      ],
-      icon: BookOpen
-    },
-    {
-      title: 'Marketing Director — India Conference at UT Austin',
-      org: 'Student Organizational Leadership',
-      period: 'April 2026 – Present',
-      category: 'Executive Leadership & Strategy',
-      bullets: [
-        'Lead marketing and publicity efforts for a major student-run conference celebrating Indian culture, scholarship, and community at UT Austin.',
-        'Develop and coordinate comprehensive promotional strategies across social media, campus channels, and organizational partnerships.',
-        'Collaborate with student executive leaders to plan and execute high-impact conference programming.',
-        'Build experience in team management, strategic communications, event operations, and community leadership.'
-      ],
-      icon: Users
-    },
-    {
-      title: 'Marketing Coordinator — India Conference at UT Austin',
-      org: 'Student Organizational Leadership',
-      period: 'December 2025 – April 2026',
-      category: 'Event Operations & Communications',
-      bullets: [
-        'Supported outreach and promotional campaigns leading up to the annual India Conference.',
-        'Collaborated with student team members to increase student awareness and engagement across UT Austin.',
-        'Developed organizational and communication skills that led to appointment as Marketing Director.'
-      ],
-      icon: Users
-    },
-    {
-      title: 'Advising Fellow — Matriculate',
-      org: 'National Educational Non-Profit',
+      title: 'Matriculate — Advising Fellow',
       period: 'November 2025 – Present',
-      category: 'Educational Equity & Student Advocacy',
+      category: 'Mentorship | Education | Student Advocacy',
       bullets: [
-        'Mentor and advise high school students from underrepresented backgrounds through the college application and decision-making process.',
-        'Provide 1-on-1 guidance on college research, essay drafting, financial aid navigation, and application preparation.',
-        'Empower students to take ownership of their educational goals and navigate higher education options with confidence.'
+        'Mentor and advise a high school student through the college application and decision-making process.',
+        'Help students navigate the often complicated process of researching colleges, identifying opportunities, and preparing competitive applications.',
+        'Provide individualized guidance while encouraging students to take ownership of their educational goals.',
+        'Develop mentorship, communication, and advising skills through consistent one-on-one support.'
       ],
       icon: HeartHandshake
     },
     {
-      title: 'Community Coordinator — Hindu YUVA',
-      org: 'Student Organizational Leadership',
-      period: 'August 2024 – May 2025',
-      category: 'Campus Community Building',
+      title: 'India Conference at UT Austin — Marketing Director',
+      period: 'April 2026 – Present',
+      category: 'Organizational Leadership | Marketing | Community Building',
       bullets: [
-        'Fostered community among university students through cultural, educational, and social programming.',
-        'Coordinated campus initiatives designed to connect students and create an inclusive environment.',
-        'Worked collaboratively with executive student officers to execute events and engage student members.'
+        'Lead marketing efforts for a student-run conference celebrating Indian culture, scholarship, and community at UT Austin.',
+        'Develop and coordinate promotional strategies to increase awareness and engagement with conference programming.',
+        'Collaborate with student leaders and organizational members to support the planning and execution of conference initiatives.',
+        'Build experience in team coordination, communications, event planning, and organizational leadership.'
+      ],
+      icon: Users
+    },
+    {
+      title: 'India Conference at UT Austin — Marketing Coordinator',
+      period: 'December 2025 – April 2026',
+      category: 'Teamwork | Communications | Event Planning',
+      bullets: [
+        'Supported marketing and outreach efforts leading up to the annual India Conference.',
+        'Collaborated with fellow students to promote events and engage the UT Austin community.',
+        'Developed communication and organizational skills that prepared me to take on a larger leadership role as Marketing Director.'
+      ],
+      icon: Users
+    },
+    {
+      title: 'Hindu YUVA — Community Coordinator',
+      period: 'August 2024 – May 2025',
+      category: 'Community Leadership | Cultural Engagement',
+      bullets: [
+        'Helped foster community among students through cultural, educational, and social programming.',
+        'Assisted with organizing initiatives designed to connect students and create an inclusive campus community.',
+        'Worked collaboratively with other student leaders to coordinate events and engage members.'
       ],
       icon: Sparkles
     },
     {
-      title: 'Residence Hall Desk Assistant — UT Austin Housing & Dining',
-      org: 'University Student Operations',
-      period: 'November 2024 – Present',
-      category: 'Residential Support & Conflict Resolution',
+      title: 'College of Natural Sciences, UT Austin — Teaching Assistant, Immunology Lab',
+      period: 'August 2026 – Present',
+      category: 'Teaching | Mentorship | STEM Education',
       bullets: [
-        'Serve as a primary point of contact for hall residents, creating a welcoming, safe, and supportive residential environment.',
-        'Assist students with residence questions, facility concerns, and campus safety resources.',
-        'Strengthen interpersonal, crisis navigation, and communication skills through daily interactions with a diverse student population.'
+        'Support undergraduate students as they learn immunology concepts and laboratory techniques.',
+        'Guide students through laboratory activities and help them build confidence in scientific problem-solving.',
+        'Translate complex scientific concepts into accessible explanations for students with different levels of understanding.',
+        'Develop my own leadership and communication skills through teaching and mentorship.'
+      ],
+      icon: BookOpen
+    },
+    {
+      title: 'UT Austin Housing & Dining — Residence Hall Desk Assistant',
+      period: 'November 2024 – Present',
+      category: 'Residential Leadership | Community Building | Student Support',
+      bullets: [
+        'Serve as a point of contact for residents and help create a welcoming, safe, and supportive residential community.',
+        'Assist students with questions, concerns, and campus resources.',
+        'Communicate with residents and university staff to help address issues and maintain effective residence hall operations.',
+        'Develop conflict-resolution, communication, and interpersonal skills through daily interactions with a diverse student community.'
       ],
       icon: Shield
     }
   ];
 
   return (
-    <div className="space-y-16 py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <div className="space-y-12 py-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
       
       {/* Header */}
-      <div className="border-b border-[#E2DDD5] pb-8 space-y-4">
-        <span className="text-xs font-semibold uppercase tracking-wider text-[#0F2C59] bg-[#0F2C59]/10 px-3 py-1 rounded-full">
-          Mentorship, Governance & Community Building
+      <div className="border-b border-slate-200 pb-6 space-y-3">
+        <span className="text-xs font-semibold uppercase tracking-wider text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Mentorship & Governance
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F2C59] tracking-tight">
+        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0A192F] tracking-tight">
           Leadership Experience
         </h1>
-        <p className="text-lg text-slate-700 max-w-3xl leading-relaxed">
-          Leadership is about taking responsibility for others, creating opportunities for people to succeed, and using my position to strengthen the community.
+        <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed max-w-3xl">
+          Leadership, to me, is not simply holding a title. It is about taking responsibility for others, creating opportunities for people to succeed, and using my position to make a community stronger.
         </p>
       </div>
 
-      {/* Leadership Philosophy Box */}
-      <div className="bg-[#0F2C59] text-white rounded-2xl p-8 space-y-4 shadow-lg">
-        <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+      {/* Leadership Philosophy Callout */}
+      <div className="bg-[#0A192F] text-white rounded-xl p-8 space-y-3 shadow-sm">
+        <span className="text-xs font-bold uppercase tracking-wider text-amber-300 font-sans">
           Philosophy on Leadership
         </span>
-        <blockquote className="font-serif text-xl sm:text-2xl italic leading-relaxed text-[#FDFBF7]">
-          “Leadership takes many forms. Sometimes it means leading a team or coordinating a major conference; other times, it means sitting down with one student and helping them believe that a college opportunity is possible.”
+        <blockquote className="font-serif text-xl sm:text-2xl italic text-slate-100 leading-relaxed">
+          “My leadership experiences have taught me that leadership can take many forms. Sometimes it means organizing an event or leading a team; other times, it means sitting down with one student and helping them believe that a particular opportunity is possible.”
         </blockquote>
       </div>
 
-      {/* Roles Timeline / Grid */}
+      {/* Roles Grid */}
       <div className="space-y-6">
-        {leadershipRoles.map((role, idx) => {
+        {roles.map((role, idx) => {
           const IconComponent = role.icon;
           return (
             <div
               key={idx}
-              className="bg-[#F7F5F0] rounded-xl border border-[#E2DDD5] p-6 sm:p-8 hover:border-[#0F2C59] transition-all duration-300 shadow-xs space-y-4"
+              className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 hover:border-[#0A192F] transition-all shadow-xs space-y-4"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E2DDD5] pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#0F2C59] text-amber-300 flex items-center justify-center shrink-0">
-                    <IconComponent className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-lg bg-[#0A192F] text-white flex items-center justify-center shrink-0">
+                    <IconComponent className="w-5 h-5 text-sky-300" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F2C59]">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0A192F]">
                       {role.title}
                     </h3>
-                    <p className="text-xs text-slate-600 font-medium">{role.org}</p>
+                    <span className="text-xs font-semibold text-blue-900 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200 inline-block mt-1">
+                      {role.category}
+                    </span>
                   </div>
                 </div>
 
-                <div className="text-left sm:text-right text-xs text-slate-500 font-medium">
-                  <span className="inline-block px-2.5 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-200 mb-1 font-semibold">
-                    {role.category}
-                  </span>
-                  <p>{role.period}</p>
+                <div className="text-left sm:text-right text-xs text-slate-500 font-medium font-sans">
+                  <p className="font-semibold text-slate-800">{role.period}</p>
                 </div>
               </div>
 
-              <ul className="space-y-2 text-sm text-slate-700">
+              <ul className="space-y-2 text-sm text-slate-700 font-sans">
                 {role.bullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -146,6 +141,16 @@ export const Leadership: React.FC = () => {
             </div>
           );
         })}
+      </div>
+
+      {/* Leadership Reflection */}
+      <div className="bg-slate-100 rounded-xl p-8 space-y-3 border border-slate-200 text-left">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#0A192F] font-sans">
+          Reflection
+        </span>
+        <p className="text-sm text-slate-700 font-sans leading-relaxed">
+          Across these roles, I have become more comfortable communicating with people from different backgrounds, taking initiative, and being someone others can rely on. As I continue toward a career in medicine, I hope to carry these lessons into the way I work with patients, colleagues, students, and the communities I serve.
+        </p>
       </div>
 
     </div>

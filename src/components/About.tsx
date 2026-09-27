@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, FileText, Download, CheckCircle2, X, GraduationCap, Compass } from 'lucide-react';
+import { BookOpen, GraduationCap, Award, FileText, Download, X, CheckCircle2 } from 'lucide-react';
 
 interface AboutProps {
   setActiveTab: (tab: string) => void;
@@ -9,136 +9,111 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   return (
-    <div className="space-y-16 py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <div className="space-y-12 py-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
       
-      {/* Header Banner */}
-      <div className="border-b border-[#E2DDD5] pb-8 space-y-4">
-        <span className="text-xs font-semibold uppercase tracking-wider text-[#0F2C59] bg-[#0F2C59]/10 px-3 py-1 rounded-full">
-          About Vineeta Singh
+      {/* Header */}
+      <div className="border-b border-slate-200 pb-6 space-y-3">
+        <span className="text-xs font-semibold uppercase tracking-wider text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Academic Foundation
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F2C59] tracking-tight">
-          Premedical Student, Researcher & Service Advocate
+        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0A192F] tracking-tight">
+          Academics & Education
         </h1>
-        <p className="text-lg text-slate-700 max-w-3xl leading-relaxed">
-          Driven by a desire to understand human health at the molecular level, advocate for health equity in communities, and serve patients with empathy and dedication.
+        <p className="text-lg text-slate-700 font-serif italic max-w-3xl leading-relaxed">
+          Bachelor of Science and Arts in Organismal Biology & Physiology • Pre-Health Professions Certificate
         </p>
       </div>
 
-      {/* Main Narrative & Sidebar Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        {/* Main Biography Column */}
-        <div className="lg:col-span-8 space-y-8">
-          <div className="prose prose-slate max-w-none space-y-5 text-slate-800 leading-relaxed font-sans text-base">
-            <h2 className="font-serif text-2xl font-bold text-[#0F2C59] border-l-4 border-[#0F2C59] pl-3">
-              My Academic & Premedical Journey
-            </h2>
+        {/* Left Column: Academic Essay */}
+        <div className="lg:col-span-8 space-y-6">
+          
+          <div className="prose prose-slate max-w-none text-slate-800 font-sans text-base leading-relaxed space-y-4">
             <p>
-              I am a premedical student in the <strong>College of Natural Sciences at The University of Texas at Austin</strong>. My path toward medicine has been shaped by a deep curiosity about biological mechanisms, a commitment to patient advocacy, and a recognition of the social factors that influence health.
+              I am pursuing a <strong>Bachelor of Science and Arts in Organismal Biology & Physiology</strong> with a <strong>Pre-Health Professions Certificate</strong> at The University of Texas at Austin (Anticipated Graduation: <strong>May 2027</strong>). My academic interests center on understanding the human body from both a biological and physiological perspective while preparing for a future career in medicine.
             </p>
             <p>
-              My academic interests center on <strong>neuroscience, neurosurgery, clinical research, and public health service</strong>. Through hands-on wet lab research, hospital and hospice volunteering, and public health service roles, I have sought to connect scientific discovery with the human realities of clinical care.
-            </p>
-
-            <h2 className="font-serif text-2xl font-bold text-[#0F2C59] border-l-4 border-[#0F2C59] pl-3 pt-4">
-              Connecting Molecular Science & Population Health
-            </h2>
-            <p>
-              My research experiences span both ends of the biological spectrum. In the <strong>Freshman Research Initiative (FRI) CRISPR Lab</strong> at UT Austin, I investigated gene regulation in <em>Caenorhabditis elegans</em> using CRISPR-Cas9 gene editing, plasmid engineering, and fluorescent tagging. This introduced me to the power of molecular genetics in deciphering disease mechanisms.
+              Through my coursework, I am building a strong foundation in biology, physiology, anatomy, and the sciences that inform clinical medicine. As I continue my undergraduate education, I hope to connect what I learn in the classroom with my interests in surgery, geriatrics, health equity, and public health, particularly as they relate to improving quality of life and access to care.
             </p>
             <p>
-              Simultaneously, my co-contributed research published in <strong>Springer International Publishing (2025)</strong> examined environmental radionuclide and heavy metal exposure in soil samples, assessing population-level radiological health risks. Together, these experiences taught me that a physician must understand not only the cellular process causing illness, but also the environmental and social context in which a patient lives.
+              Outside of my coursework, I am grateful to be part of the <strong>Dell Scholars, FRI, and WINS</strong> communities, which have provided opportunities to grow as a student, researcher, and future healthcare professional. These experiences have encouraged me to explore questions beyond the classroom and think critically about how scientific knowledge can translate into meaningful improvements in patient care.
             </p>
-
-            <h2 className="font-serif text-2xl font-bold text-[#0F2C59] border-l-4 border-[#0F2C59] pl-3 pt-4">
-              Service as the Core of Patient Care
-            </h2>
             <p>
-              Beyond the laboratory, my most meaningful experiences have occurred at the bedside and in the community. Whether serving as a student volunteer at <strong>St. David’s HealthCare</strong>, offering end-of-life companionship at <strong>Enhabit Hospice</strong>, assisting stroke survivors with speech therapy at <strong>Austin Speech Labs</strong>, or navigating digital resources for community members at <strong>Austin Free-Net</strong>, I have learned that care begins with active listening and humility.
-            </p>
-            <p className="italic bg-[#F7F5F0] p-4 rounded-lg border border-[#E2DDD5] text-[#0F2C59]">
-              “Medicine is not merely the diagnosis and treatment of disease; it is the art of recognizing the whole person and standing with patients during their most vulnerable moments.”
+              On this page, I highlight my academic journey at UT Austin, including my coursework, research experiences, scholarly programs, and the ways my education continues to shape my goals in medicine and public health.
             </p>
           </div>
 
           {/* Action Buttons */}
-          <div className="pt-4 flex flex-wrap gap-4">
+          <div className="pt-2 flex flex-wrap gap-4">
             <button
               onClick={() => setResumeModalOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#0F2C59] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#0A192F] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors shadow-xs"
             >
               <FileText className="w-4 h-4 text-amber-300" />
-              View Complete Resume
+              View Complete Resume (CV)
             </button>
             <button
               onClick={() => setActiveTab('research')}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-[#0F2C59] text-[#0F2C59] text-xs font-semibold uppercase tracking-wider hover:bg-[#0F2C59] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-slate-300 text-[#0A192F] text-xs font-semibold uppercase tracking-wider hover:bg-slate-100 transition-colors"
             >
               <BookOpen className="w-4 h-4" />
-              Explore Research Projects
+              Explore Research
             </button>
           </div>
+
         </div>
 
-        {/* Sidebar Info Card */}
+        {/* Right Column: Key Details Card */}
         <div className="lg:col-span-4 space-y-6">
-          
-          {/* Quick Details Card */}
-          <div className="bg-[#F7F5F0] rounded-xl p-6 border border-[#E2DDD5] space-y-6 shadow-sm">
-            <h3 className="font-serif text-xl font-bold text-[#0F2C59] border-b border-[#E2DDD5] pb-3 flex items-center gap-2">
-              <GraduationCap className="w-5 h-5 text-amber-600" />
-              Academic Snapshot
+          <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-xs space-y-5">
+            <h3 className="font-serif text-xl font-bold text-[#0A192F] border-b border-slate-200 pb-3 flex items-center gap-2">
+              <GraduationCap className="w-5 h-5 text-blue-900" />
+              Degree Overview
             </h3>
 
-            <div className="space-y-4 text-xs">
+            <div className="space-y-4 text-xs font-sans">
               <div>
                 <span className="text-slate-500 uppercase font-semibold block tracking-wider">Institution</span>
                 <span className="text-slate-900 font-medium text-sm">The University of Texas at Austin</span>
               </div>
 
               <div>
-                <span className="text-slate-500 uppercase font-semibold block tracking-wider">College</span>
-                <span className="text-slate-900 font-medium text-sm">College of Natural Sciences</span>
+                <span className="text-slate-500 uppercase font-semibold block tracking-wider">Degree</span>
+                <span className="text-slate-900 font-medium text-sm">B.S.A. Organismal Biology & Physiology</span>
               </div>
 
               <div>
-                <span className="text-slate-500 uppercase font-semibold block tracking-wider">Track & Role</span>
-                <span className="text-slate-900 font-medium text-sm">Premedical Track • Immunology Lab TA</span>
+                <span className="text-slate-500 uppercase font-semibold block tracking-wider">Certificate</span>
+                <span className="text-slate-900 font-medium text-sm">Pre-Health Professions Certificate</span>
               </div>
 
               <div>
-                <span className="text-slate-500 uppercase font-semibold block tracking-wider">Career Interest</span>
-                <span className="text-[#0F2C59] font-semibold text-sm">Surgeon (Neurosurgery Interest), Clinical Researcher & Educator</span>
+                <span className="text-slate-500 uppercase font-semibold block tracking-wider">Anticipated Graduation</span>
+                <span className="text-[#0A192F] font-bold text-sm">May 2027</span>
               </div>
             </div>
           </div>
 
-          {/* Key Competencies Card */}
-          <div className="bg-[#0F2C59] text-white rounded-xl p-6 space-y-4 shadow-md">
+          {/* Scholars & Honors Box */}
+          <div className="bg-[#0A192F] text-white rounded-xl p-6 space-y-3 shadow-md">
             <h3 className="font-serif text-lg font-bold text-amber-300 flex items-center gap-2">
-              <Compass className="w-5 h-5" />
-              Key Competencies
+              <Award className="w-5 h-5" />
+              Scholarly Communities
             </h3>
-            <ul className="space-y-2.5 text-xs text-slate-200">
+            <ul className="space-y-2 text-xs text-slate-200">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span><strong>CRISPR-Cas9 & Plasmid Design:</strong> ApE software, PCR, Gel Electrophoresis, Gibson Assembly, Sanger Sequencing</span>
+                <span><strong>Dell Scholars:</strong> Academic excellence & community engagement support.</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span><strong>Environmental Radiology:</strong> Gamma Spectroscopy using NaI(Tl) detectors & risk modeling</span>
+                <span><strong>FRI Scholar:</strong> Freshman Research Initiative CRISPR genetics research stream.</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span><strong>Clinical & Hospice:</strong> In-hospital patient navigation, end-of-life care, stroke speech therapy</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span><strong>Public Health:</strong> Epidemiological surveillance, crisis intervention, digital health equity</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span><strong>Teaching & Mentorship:</strong> Undergraduate Immunology lab instruction, 1-on-1 college advising</span>
+                <span><strong>WINS Scholar:</strong> Women in Natural Sciences leadership community at UT Austin.</span>
               </li>
             </ul>
           </div>
@@ -148,17 +123,16 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
 
       {/* Resume Modal */}
       {resumeModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-fade-in">
-          <div className="bg-[#FDFBF7] rounded-xl border border-[#E2DDD5] w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-2xl relative">
-            
-            <div className="flex items-center justify-between border-b border-[#E2DDD5] pb-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/75 backdrop-blur-sm animate-fade-in">
+          <div className="bg-white rounded-xl border border-slate-200 w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-2xl relative text-left">
+            <div className="flex items-center justify-between border-b border-slate-200 pb-4">
               <div>
-                <h3 className="font-serif text-2xl font-bold text-[#0F2C59]">Vineeta Singh — Curriculum Vitae</h3>
-                <p className="text-xs text-slate-500">UT Austin Premedical Track • Research & Service Credentials</p>
+                <h3 className="font-serif text-2xl font-bold text-[#0A192F]">Vineeta Singh — Curriculum Vitae</h3>
+                <p className="text-xs text-slate-500">UT Austin Premedical Track • Class of 2027</p>
               </div>
               <button
                 onClick={() => setResumeModalOpen(false)}
-                className="p-2 rounded-md hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-colors"
+                className="p-2 rounded-md hover:bg-slate-100 text-slate-600"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -166,91 +140,47 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
 
             <div className="space-y-6 text-sm text-slate-800 font-sans">
               <section className="space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#0F2C59] uppercase tracking-wider border-b border-[#E2DDD5] pb-1">
-                  Education & Academic Appointments
+                <h4 className="font-serif text-lg font-bold text-[#0A192F] uppercase tracking-wider border-b border-slate-200 pb-1">
+                  Education & Honors
                 </h4>
-                <div className="space-y-1">
-                  <div className="flex justify-between font-semibold">
-                    <span>The University of Texas at Austin — Premedical Track</span>
-                    <span className="text-xs text-slate-500">Austin, TX</span>
-                  </div>
-                  <p className="text-xs text-slate-600">College of Natural Sciences • Biology / Pre-Medicine Concentration</p>
+                <div className="flex justify-between font-semibold">
+                  <span>The University of Texas at Austin — B.S.A. Organismal Biology & Physiology</span>
+                  <span className="text-xs text-slate-500">May 2027</span>
                 </div>
-                <div className="space-y-1 pt-2">
-                  <div className="flex justify-between font-semibold">
-                    <span>Teaching Assistant — Immunology Lab (CNS)</span>
-                    <span className="text-xs text-slate-500">Aug 2026 – Present</span>
-                  </div>
-                  <p className="text-xs text-slate-600">Guides undergraduate students through laboratory concepts, assays, and scientific problem-solving.</p>
-                </div>
+                <p className="text-xs text-slate-600">Pre-Health Professions Certificate • Dell Scholar • FRI Scholar • WINS Scholar</p>
               </section>
 
               <section className="space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#0F2C59] uppercase tracking-wider border-b border-[#E2DDD5] pb-1">
-                  Research Experience & Publications
-                </h4>
-                <div>
-                  <div className="flex justify-between font-semibold">
-                    <span>Freshman Research Initiative — Undergraduate Researcher (CRISPR Lab)</span>
-                    <span className="text-xs text-slate-500">Jan 2025 – May 2025</span>
-                  </div>
-                  <p className="text-xs text-slate-600">
-                    Investigated embryonic development & gene regulation of C17E4.20 in <em>C. elegans</em> using CRISPR-Cas9, Gibson Assembly, and Sanger sequencing.
-                  </p>
-                </div>
-                <div className="pt-2">
-                  <div className="flex justify-between font-semibold">
-                    <span>Co-Author / Contributor — Springer International Publishing</span>
-                    <span className="text-xs text-slate-500">Published Oct 20, 2025</span>
-                  </div>
-                  <p className="text-xs text-slate-600">
-                    "Radiation Hazards and Health Risk Assessment from Exposure to Terrestrial Radionuclides and Heavy Metals in Noida and Greater Noida, India."
-                  </p>
-                </div>
-              </section>
-
-              <section className="space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#0F2C59] uppercase tracking-wider border-b border-[#E2DDD5] pb-1">
-                  Clinical & Public Health Service
+                <h4 className="font-serif text-lg font-bold text-[#0A192F] uppercase tracking-wider border-b border-slate-200 pb-1">
+                  Healthcare & Clinical Experience
                 </h4>
                 <ul className="list-disc list-inside text-xs space-y-1 text-slate-700">
-                  <li><strong>St. David’s HealthCare Student Volunteer:</strong> In-hospital patient & clinical support (Sept 2026–Present).</li>
-                  <li><strong>Enhabit Home Health & Hospice Volunteer:</strong> End-of-life companionship & patient support (Aug 2026–Present).</li>
+                  <li><strong>St. David’s HealthCare Student Volunteer:</strong> Hospital-based clinical care (Sept 2026–Present).</li>
+                  <li><strong>Enhabit Hospice Volunteer:</strong> Hospice & end-of-life patient support (Aug 2026–Present).</li>
+                  <li><strong>Texas HHS Crisis Services Intern:</strong> Crisis intervention & mental health access (Aug 2026–Present).</li>
+                  <li><strong>UT Austin CNS Immunology Lab TA:</strong> Teaching assistant & mentorship (Aug 2026–Present).</li>
+                  <li><strong>Austin Free-Net Digital Navigator:</strong> Community digital health equity (Aug 2026–Present).</li>
                   <li><strong>Austin Speech Labs Speech Therapy Assistant:</strong> Stroke rehabilitation support (Jan 2026–May 2026).</li>
-                  <li><strong>Austin Free-Net Digital Navigator:</strong> Community digital health equity & resource access (Aug 2026–Present).</li>
-                  <li><strong>Houston Health Department Epidemiology Intern:</strong> Public Health Science & Surveillance Division (Jan 2024–Aug 2024).</li>
-                  <li><strong>AmeriCorps Public Health Navigator:</strong> Connecting underserved families with health resources.</li>
-                </ul>
-              </section>
-
-              <section className="space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#0F2C59] uppercase tracking-wider border-b border-[#E2DDD5] pb-1">
-                  Leadership & Outreach
-                </h4>
-                <ul className="list-disc list-inside text-xs space-y-1 text-slate-700">
-                  <li><strong>India Conference at UT Austin:</strong> Marketing Director (Apr 2026–Present) & Marketing Coordinator (Dec 2025–Apr 2026).</li>
-                  <li><strong>Matriculate Advising Fellow:</strong> 1-on-1 college application mentor for high school students (Nov 2025–Present).</li>
-                  <li><strong>Hindu YUVA Community Coordinator:</strong> Campus programming & inclusivity (Aug 2024–May 2025).</li>
-                  <li><strong>UT Austin Housing & Dining:</strong> Residence Hall Desk Assistant (Nov 2024–Present).</li>
+                  <li><strong>Houston Health Dept Epidemiology Intern:</strong> Public Health Science & Surveillance (Jan 2024–Aug 2024).</li>
+                  <li><strong>AmeriCorps Public Health Navigator:</strong> Resource navigation & health outreach (Jan 2024–Aug 2024).</li>
                 </ul>
               </section>
             </div>
 
-            <div className="flex justify-between items-center pt-4 border-t border-[#E2DDD5]">
-              <span className="text-xs text-slate-500">Document generated from verified portfolio record.</span>
+            <div className="flex justify-between items-center pt-4 border-t border-slate-200">
+              <span className="text-xs text-slate-500">Document generated from verified portfolio credentials.</span>
               <button
-                onClick={() => {
-                  alert("Resume download triggered (Draft PDF format).");
-                }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#0F2C59] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors"
+                onClick={() => alert("Resume download triggered (Draft PDF format).")}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0A192F] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors"
               >
                 <Download className="w-4 h-4 text-amber-300" />
-                Download PDF Resume
+                Download Resume PDF
               </button>
             </div>
           </div>
         </div>
       )}
+
     </div>
   );
 };
