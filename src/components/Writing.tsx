@@ -84,11 +84,11 @@ export const Writing: React.FC = () => {
     <div className="space-y-16 py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
       
       {/* Header */}
-      <div className="border-b border-[#E2DDD5] pb-8 space-y-4">
-        <span className="text-xs font-semibold uppercase tracking-wider text-[#0F2C59] bg-[#0F2C59]/10 px-3 py-1 rounded-full">
+      <div className="border-b border-slate-200 pb-8 space-y-4">
+        <span className="text-xs font-semibold uppercase tracking-wider text-[#993F00] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
           Reflections & Academic Writing
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F2C59] tracking-tight">
+        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F172A] tracking-tight">
           Writing & Personal Essays
         </h1>
         <p className="text-lg text-slate-700 max-w-3xl leading-relaxed">
@@ -101,8 +101,8 @@ export const Writing: React.FC = () => {
             onClick={() => setActiveFilter('all')}
             className={`px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider transition-colors ${
               activeFilter === 'all'
-                ? 'bg-[#0F2C59] text-white shadow-sm'
-                : 'bg-[#F7F5F0] text-slate-700 hover:bg-[#EFECE6] border border-[#E2DDD5]'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             All Essays ({articles.length})
@@ -111,8 +111,8 @@ export const Writing: React.FC = () => {
             onClick={() => setActiveFilter('reflection')}
             className={`px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider transition-colors ${
               activeFilter === 'reflection'
-                ? 'bg-[#0F2C59] text-white shadow-sm'
-                : 'bg-[#F7F5F0] text-slate-700 hover:bg-[#EFECE6] border border-[#E2DDD5]'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Personal & Clinical Reflections
@@ -121,8 +121,8 @@ export const Writing: React.FC = () => {
             onClick={() => setActiveFilter('science')}
             className={`px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider transition-colors ${
               activeFilter === 'science'
-                ? 'bg-[#0F2C59] text-white shadow-sm'
-                : 'bg-[#F7F5F0] text-slate-700 hover:bg-[#EFECE6] border border-[#E2DDD5]'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Scientific & Lab Essays
@@ -131,8 +131,8 @@ export const Writing: React.FC = () => {
             onClick={() => setActiveFilter('equity')}
             className={`px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider transition-colors ${
               activeFilter === 'equity'
-                ? 'bg-[#0F2C59] text-white shadow-sm'
-                : 'bg-[#F7F5F0] text-slate-700 hover:bg-[#EFECE6] border border-[#E2DDD5]'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Health Equity & Policy
@@ -145,20 +145,20 @@ export const Writing: React.FC = () => {
         {filteredArticles.map((article) => (
           <div
             key={article.id}
-            className="bg-[#F7F5F0] rounded-xl border border-[#E2DDD5] p-6 sm:p-8 flex flex-col justify-between hover:border-[#0F2C59] transition-all duration-300 shadow-xs space-y-4 group"
+            className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 flex flex-col justify-between hover:border-[#BF5700] transition-all duration-300 shadow-xs space-y-4 group"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between text-xs text-slate-500 font-medium">
-                <span className="bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded font-semibold border border-amber-200">
+                <span className="bg-orange-50 text-[#993F00] px-2.5 py-0.5 rounded font-semibold border border-orange-200">
                   {article.categoryLabel}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5" />
+                  <Clock className="w-3.5 h-3.5 text-[#BF5700]" />
                   {article.readTime}
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl font-bold text-[#0F2C59] group-hover:text-[#1E3A8A] transition-colors">
+              <h3 className="font-serif text-2xl font-bold text-[#0F172A] group-hover:text-[#BF5700] transition-colors">
                 {article.title}
               </h3>
 
@@ -167,11 +167,11 @@ export const Writing: React.FC = () => {
               </p>
             </div>
 
-            <div className="pt-4 border-t border-[#E2DDD5] flex items-center justify-between">
+            <div className="pt-4 border-t border-slate-200 flex items-center justify-between">
               <span className="text-xs text-slate-400 font-medium">{article.date}</span>
               <button
                 onClick={() => setSelectedArticle(article)}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0F2C59] group-hover:translate-x-1 transition-transform"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#BF5700] group-hover:translate-x-1 transition-transform"
               >
                 <span>Read Full Essay</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -184,15 +184,15 @@ export const Writing: React.FC = () => {
       {/* Reader Drawer / Modal */}
       {selectedArticle && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/75 backdrop-blur-sm animate-fade-in">
-          <div className="bg-[#FDFBF7] rounded-xl border border-[#E2DDD5] w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-10 space-y-6 shadow-2xl relative">
+          <div className="bg-white rounded-xl border border-slate-200 w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-10 space-y-6 shadow-2xl relative text-left">
             
             {/* Header */}
-            <div className="flex items-start justify-between border-b border-[#E2DDD5] pb-4 gap-4">
+            <div className="flex items-start justify-between border-b border-slate-200 pb-4 gap-4">
               <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded border border-amber-200">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#993F00] bg-orange-50 px-2.5 py-0.5 rounded border border-orange-200">
                   {selectedArticle.categoryLabel}
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F2C59] pt-2">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F172A] pt-2">
                   {selectedArticle.title}
                 </h2>
                 <p className="text-xs text-slate-500 font-medium">
@@ -202,7 +202,7 @@ export const Writing: React.FC = () => {
 
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="p-2 rounded-md hover:bg-slate-200 text-slate-600 transition-colors shrink-0"
+                className="p-2 rounded-md hover:bg-slate-100 text-slate-600 transition-colors shrink-0"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -211,18 +211,18 @@ export const Writing: React.FC = () => {
             {/* Article Prose */}
             <div className="space-y-4 text-slate-800 font-sans text-sm sm:text-base leading-relaxed">
               {selectedArticle.fullText.map((paragraph, i) => (
-                <p key={i} className="first-letter:text-3xl first-letter:font-serif first-letter:font-bold first-letter:text-[#0F2C59] first-letter:mr-1">
+                <p key={i} className="first-letter:text-3xl first-letter:font-serif first-letter:font-bold first-letter:text-[#BF5700] first-letter:mr-1">
                   {paragraph}
                 </p>
               ))}
             </div>
 
             {/* Footer */}
-            <div className="pt-6 border-t border-[#E2DDD5] flex justify-between items-center text-xs text-slate-500">
+            <div className="pt-6 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
               <span>Vineeta Singh Portfolio • Academic & Personal Reflections</span>
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="px-5 py-2.5 rounded-md bg-[#0F2C59] text-white font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors"
+                className="px-5 py-2.5 rounded-md bg-[#BF5700] text-white font-semibold uppercase tracking-wider hover:bg-[#993F00] transition-colors"
               >
                 Close Essay
               </button>

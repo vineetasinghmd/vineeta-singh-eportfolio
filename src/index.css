@@ -19,41 +19,37 @@
   }
 }
 
-/* Natural Healthcare Color Utility Classes */
+/* UT Austin Burnt Orange Theme Utility Classes */
 .bg-[#F8FAFC] {
   background-color: #F8FAFC;
 }
 
-.bg-clinical-white {
-  background-color: #FFFFFF;
+.bg-burnt-orange {
+  background-color: #BF5700;
 }
 
-.bg-med-blue-light {
-  background-color: #F0F6FA;
+.text-burnt-orange {
+  color: #BF5700;
 }
 
-.bg-med-blue-tag {
-  background-color: #E0F2FE;
+.border-burnt-orange {
+  border-color: #BF5700;
 }
 
-.text-med-navy {
-  color: #0B2545;
+.bg-burnt-orange-dark {
+  background-color: #993F00;
 }
 
-.bg-med-navy {
-  background-color: #0B2545;
+.text-burnt-orange-dark {
+  color: #993F00;
 }
 
-.text-med-blue {
-  color: #134074;
+.bg-burnt-orange-light {
+  background-color: #FFF7ED;
 }
 
-.bg-med-blue {
-  background-color: #134074;
-}
-
-.border-med-blue {
-  border-color: #CBD5E1;
+.border-burnt-orange-light {
+  border-color: #FED7AA;
 }
 
 /* Animations */
@@ -80,9 +76,9 @@
   background: #F8FAFC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #FED7AA;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #134074;
+  background: #BF5700;
 }

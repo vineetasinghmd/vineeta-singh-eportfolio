@@ -28,9 +28,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-      {/* Top Academic Sub-Bar */}
-      <div className="bg-[#0A192F] text-slate-200 py-1.5 px-4 text-xs font-sans text-center tracking-wide flex items-center justify-center gap-2">
-        <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+      {/* Top UT Austin Academic Bar */}
+      <div className="bg-[#BF5700] text-white py-1.5 px-4 text-xs font-sans text-center tracking-wide flex items-center justify-center gap-2 font-medium shadow-xs">
+        <span className="inline-block w-2 h-2 rounded-full bg-amber-300 animate-pulse"></span>
         <span>The University of Texas at Austin • Organismal Biology & Physiology (B.S.A.) • Class of 2027</span>
       </div>
 
@@ -42,11 +42,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             onClick={() => handleNavClick('home')}
             className="cursor-pointer flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 rounded-lg bg-[#0A192F] text-white flex items-center justify-center font-serif text-xl font-bold shadow-xs group-hover:bg-[#1E3A8A] transition-colors">
+            <div className="w-10 h-10 rounded-lg bg-[#BF5700] text-white flex items-center justify-center font-serif text-xl font-bold shadow-xs group-hover:bg-[#993F00] transition-colors">
               VS
             </div>
             <div className="text-left">
-              <span className="font-serif text-xl sm:text-2xl font-bold text-[#0A192F] tracking-tight block group-hover:text-[#1E3A8A] transition-colors">
+              <span className="font-serif text-xl sm:text-2xl font-bold text-[#0F172A] tracking-tight block group-hover:text-[#BF5700] transition-colors">
                 Vineeta Singh
               </span>
               <span className="text-[11px] tracking-wider uppercase text-slate-500 font-semibold block">
@@ -65,8 +65,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                   onClick={() => handleNavClick(item.id)}
                   className={`px-3 py-2 rounded-md text-xs font-medium tracking-wide transition-all ${
                     isActive
-                      ? 'bg-[#0A192F] text-white shadow-xs font-semibold'
-                      : 'text-slate-700 hover:text-[#0A192F] hover:bg-slate-100'
+                      ? 'bg-[#BF5700] text-white shadow-xs font-semibold'
+                      : 'text-slate-700 hover:text-[#BF5700] hover:bg-orange-50'
                   }`}
                 >
                   {item.label}
@@ -79,9 +79,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           <div className="flex lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md text-slate-700 hover:bg-slate-100 focus:outline-none"
+              className="p-2 rounded-md text-slate-700 hover:bg-orange-50 focus:outline-none"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6 text-[#0A192F]" /> : <Menu className="w-6 h-6 text-[#0A192F]" />}
+              {mobileMenuOpen ? <X className="w-6 h-6 text-[#BF5700]" /> : <Menu className="w-6 h-6 text-[#BF5700]" />}
             </button>
           </div>
         </div>
@@ -98,8 +98,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                 onClick={() => handleNavClick(item.id)}
                 className={`w-full text-left px-4 py-2.5 rounded-md text-sm font-medium transition-colors ${
                   isActive
-                    ? 'bg-[#0A192F] text-white font-semibold'
-                    : 'text-slate-700 hover:bg-slate-100 hover:text-[#0A192F]'
+                    ? 'bg-[#BF5700] text-white font-semibold'
+                    : 'text-slate-700 hover:bg-orange-50 hover:text-[#BF5700]'
                 }`}
               >
                 {item.label}

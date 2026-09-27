@@ -13,13 +13,13 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
       
       {/* Header */}
       <div className="border-b border-slate-200 pb-6 space-y-3">
-        <span className="text-xs font-semibold uppercase tracking-wider text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+        <span className="text-xs font-semibold uppercase tracking-wider text-[#993F00] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
           Academic Foundation
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0A192F] tracking-tight">
+        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F172A] tracking-tight">
           Academics & Education
         </h1>
-        <p className="text-lg text-slate-700 font-serif italic max-w-3xl leading-relaxed">
+        <p className="text-lg text-[#993F00] font-serif italic max-w-3xl leading-relaxed">
           Bachelor of Science and Arts in Organismal Biology & Physiology • Pre-Health Professions Certificate
         </p>
       </div>
@@ -32,13 +32,13 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
           
           <div className="prose prose-slate max-w-none text-slate-800 font-sans text-base leading-relaxed space-y-4">
             <p>
-              I am pursuing a <strong>Bachelor of Science and Arts in Organismal Biology & Physiology</strong> with a <strong>Pre-Health Professions Certificate</strong> at The University of Texas at Austin (Anticipated Graduation: <strong>May 2027</strong>). My academic interests center on understanding the human body from both a biological and physiological perspective while preparing for a future career in medicine.
+              I am pursuing a <strong className="text-[#BF5700]">Bachelor of Science and Arts in Organismal Biology & Physiology</strong> with a <strong>Pre-Health Professions Certificate</strong> at The University of Texas at Austin (Anticipated Graduation: <strong>May 2027</strong>). My academic interests center on understanding the human body from both a biological and physiological perspective while preparing for a future career in medicine.
             </p>
             <p>
               Through my coursework, I am building a strong foundation in biology, physiology, anatomy, and the sciences that inform clinical medicine. As I continue my undergraduate education, I hope to connect what I learn in the classroom with my interests in surgery, geriatrics, health equity, and public health, particularly as they relate to improving quality of life and access to care.
             </p>
             <p>
-              Outside of my coursework, I am grateful to be part of the <strong>Dell Scholars, FRI, and WINS</strong> communities, which have provided opportunities to grow as a student, researcher, and future healthcare professional. These experiences have encouraged me to explore questions beyond the classroom and think critically about how scientific knowledge can translate into meaningful improvements in patient care.
+              Outside of my coursework, I am grateful to be part of the <strong className="text-[#BF5700]">Dell Scholars, FRI, and WINS</strong> communities, which have provided opportunities to grow as a student, researcher, and future healthcare professional. These experiences have encouraged me to explore questions beyond the classroom and think critically about how scientific knowledge can translate into meaningful improvements in patient care.
             </p>
             <p>
               On this page, I highlight my academic journey at UT Austin, including my coursework, research experiences, scholarly programs, and the ways my education continues to shape my goals in medicine and public health.
@@ -49,14 +49,14 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
           <div className="pt-2 flex flex-wrap gap-4">
             <button
               onClick={() => setResumeModalOpen(true)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#0A192F] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors shadow-xs"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#BF5700] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#993F00] transition-colors shadow-xs"
             >
-              <FileText className="w-4 h-4 text-amber-300" />
+              <FileText className="w-4 h-4 text-amber-200" />
               View Complete Resume (CV)
             </button>
             <button
               onClick={() => setActiveTab('research')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-slate-300 text-[#0A192F] text-xs font-semibold uppercase tracking-wider hover:bg-slate-100 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-orange-200 text-[#BF5700] bg-orange-50/50 text-xs font-semibold uppercase tracking-wider hover:bg-orange-100 transition-colors"
             >
               <BookOpen className="w-4 h-4" />
               Explore Research
@@ -68,8 +68,8 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
         {/* Right Column: Key Details Card */}
         <div className="lg:col-span-4 space-y-6">
           <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-xs space-y-5">
-            <h3 className="font-serif text-xl font-bold text-[#0A192F] border-b border-slate-200 pb-3 flex items-center gap-2">
-              <GraduationCap className="w-5 h-5 text-blue-900" />
+            <h3 className="font-serif text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-3 flex items-center gap-2">
+              <GraduationCap className="w-5 h-5 text-[#BF5700]" />
               Degree Overview
             </h3>
 
@@ -91,28 +91,28 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
 
               <div>
                 <span className="text-slate-500 uppercase font-semibold block tracking-wider">Anticipated Graduation</span>
-                <span className="text-[#0A192F] font-bold text-sm">May 2027</span>
+                <span className="text-[#BF5700] font-bold text-sm">May 2027</span>
               </div>
             </div>
           </div>
 
           {/* Scholars & Honors Box */}
-          <div className="bg-[#0A192F] text-white rounded-xl p-6 space-y-3 shadow-md">
+          <div className="bg-[#0F172A] text-white rounded-xl p-6 space-y-3 shadow-md border border-slate-800">
             <h3 className="font-serif text-lg font-bold text-amber-300 flex items-center gap-2">
-              <Award className="w-5 h-5" />
+              <Award className="w-5 h-5 text-[#BF5700]" />
               Scholarly Communities
             </h3>
             <ul className="space-y-2 text-xs text-slate-200">
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span><strong>Dell Scholars:</strong> Academic excellence & community engagement support.</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span><strong>FRI Scholar:</strong> Freshman Research Initiative CRISPR genetics research stream.</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span><strong>WINS Scholar:</strong> Women in Natural Sciences leadership community at UT Austin.</span>
               </li>
             </ul>
@@ -127,8 +127,8 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
           <div className="bg-white rounded-xl border border-slate-200 w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-2xl relative text-left">
             <div className="flex items-center justify-between border-b border-slate-200 pb-4">
               <div>
-                <h3 className="font-serif text-2xl font-bold text-[#0A192F]">Vineeta Singh — Curriculum Vitae</h3>
-                <p className="text-xs text-slate-500">UT Austin Premedical Track • Class of 2027</p>
+                <h3 className="font-serif text-2xl font-bold text-[#0F172A]">Vineeta Singh — Curriculum Vitae</h3>
+                <p className="text-xs text-[#BF5700] font-semibold">UT Austin Premedical Track • Class of 2027</p>
               </div>
               <button
                 onClick={() => setResumeModalOpen(false)}
@@ -140,7 +140,7 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
 
             <div className="space-y-6 text-sm text-slate-800 font-sans">
               <section className="space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#0A192F] uppercase tracking-wider border-b border-slate-200 pb-1">
+                <h4 className="font-serif text-lg font-bold text-[#0F172A] uppercase tracking-wider border-b border-slate-200 pb-1">
                   Education & Honors
                 </h4>
                 <div className="flex justify-between font-semibold">
@@ -151,7 +151,7 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
               </section>
 
               <section className="space-y-2">
-                <h4 className="font-serif text-lg font-bold text-[#0A192F] uppercase tracking-wider border-b border-slate-200 pb-1">
+                <h4 className="font-serif text-lg font-bold text-[#0F172A] uppercase tracking-wider border-b border-slate-200 pb-1">
                   Healthcare & Clinical Experience
                 </h4>
                 <ul className="list-disc list-inside text-xs space-y-1 text-slate-700">
@@ -171,9 +171,9 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
               <span className="text-xs text-slate-500">Document generated from verified portfolio credentials.</span>
               <button
                 onClick={() => alert("Resume download triggered (Draft PDF format).")}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0A192F] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#BF5700] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#993F00] transition-colors"
               >
-                <Download className="w-4 h-4 text-amber-300" />
+                <Download className="w-4 h-4 text-amber-200" />
                 Download Resume PDF
               </button>
             </div>

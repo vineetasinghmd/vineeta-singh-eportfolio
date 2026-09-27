@@ -21,11 +21,11 @@ export const Contact: React.FC = () => {
     <div className="space-y-16 py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
       
       {/* Header */}
-      <div className="border-b border-[#E2DDD5] pb-8 space-y-4">
-        <span className="text-xs font-semibold uppercase tracking-wider text-[#0F2C59] bg-[#0F2C59]/10 px-3 py-1 rounded-full">
+      <div className="border-b border-slate-200 pb-8 space-y-4">
+        <span className="text-xs font-semibold uppercase tracking-wider text-[#993F00] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
           Get In Touch
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F2C59] tracking-tight">
+        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F172A] tracking-tight">
           Contact & Academic Inquiries
         </h1>
         <p className="text-lg text-slate-700 max-w-3xl leading-relaxed">
@@ -38,18 +38,18 @@ export const Contact: React.FC = () => {
         
         {/* Left Column: Form */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="bg-[#F7F5F0] rounded-xl border border-[#E2DDD5] p-6 sm:p-8 space-y-6 shadow-xs">
-            <h3 className="font-serif text-2xl font-bold text-[#0F2C59] border-b border-[#E2DDD5] pb-3">
+          <div className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-xs">
+            <h3 className="font-serif text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3">
               Send a Message
             </h3>
 
             {submitted ? (
-              <div className="bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-lg p-6 space-y-3 animate-fade-in">
+              <div className="bg-orange-50 border border-orange-200 text-[#993F00] rounded-lg p-6 space-y-3 animate-fade-in">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-6 h-6 text-emerald-600" />
-                  <h4 className="font-serif text-lg font-bold">Message Received!</h4>
+                  <CheckCircle2 className="w-6 h-6 text-[#BF5700]" />
+                  <h4 className="font-serif text-lg font-bold text-[#0F172A]">Message Received!</h4>
                 </div>
-                <p className="text-xs text-emerald-800 leading-relaxed">
+                <p className="text-xs text-slate-700 leading-relaxed">
                   Thank you for reaching out, {formData.name}. Your message has been submitted to Vineeta's academic inbox. You will receive a response at <strong>{formData.email}</strong> shortly.
                 </p>
                 <button
@@ -57,7 +57,7 @@ export const Contact: React.FC = () => {
                     setSubmitted(false);
                     setFormData({ name: '', email: '', subject: 'Research Collaboration', message: '' });
                   }}
-                  className="px-4 py-2 bg-[#0F2C59] text-white text-xs font-semibold uppercase rounded hover:bg-[#1E3A8A] transition-colors"
+                  className="px-4 py-2 bg-[#BF5700] text-white text-xs font-semibold uppercase rounded hover:bg-[#993F00] transition-colors"
                 >
                   Send Another Message
                 </button>
@@ -74,7 +74,7 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Dr. Sarah Jenkins"
-                    className="w-full px-4 py-2.5 rounded-md border border-[#E2DDD5] bg-white text-slate-900 text-sm focus:outline-none focus:border-[#0F2C59]"
+                    className="w-full px-4 py-2.5 rounded-md border border-slate-200 bg-slate-50 text-slate-900 text-sm focus:outline-none focus:border-[#BF5700] focus:bg-white"
                   />
                 </div>
 
@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g. s.jenkins@utexas.edu"
-                    className="w-full px-4 py-2.5 rounded-md border border-[#E2DDD5] bg-white text-slate-900 text-sm focus:outline-none focus:border-[#0F2C59]"
+                    className="w-full px-4 py-2.5 rounded-md border border-slate-200 bg-slate-50 text-slate-900 text-sm focus:outline-none focus:border-[#BF5700] focus:bg-white"
                   />
                 </div>
 
@@ -99,7 +99,7 @@ export const Contact: React.FC = () => {
                   <select
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-md border border-[#E2DDD5] bg-white text-slate-900 text-sm focus:outline-none focus:border-[#0F2C59]"
+                    className="w-full px-4 py-2.5 rounded-md border border-slate-200 bg-slate-50 text-slate-900 text-sm focus:outline-none focus:border-[#BF5700] focus:bg-white"
                   >
                     <option value="Research Collaboration">Research Collaboration</option>
                     <option value="Immunology TA / Student Advising">Immunology TA / Student Advising</option>
@@ -118,15 +118,15 @@ export const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Please enter your message or inquiry details..."
-                    className="w-full px-4 py-2.5 rounded-md border border-[#E2DDD5] bg-white text-slate-900 text-sm focus:outline-none focus:border-[#0F2C59]"
+                    className="w-full px-4 py-2.5 rounded-md border border-slate-200 bg-slate-50 text-slate-900 text-sm focus:outline-none focus:border-[#BF5700] focus:bg-white"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md bg-[#0F2C59] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#1E3A8A] transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md bg-[#BF5700] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#993F00] transition-colors shadow-xs"
                 >
-                  <Send className="w-4 h-4 text-amber-300" />
+                  <Send className="w-4 h-4 text-amber-200" />
                   Submit Inquiry
                 </button>
               </form>
@@ -137,25 +137,25 @@ export const Contact: React.FC = () => {
         {/* Right Column: Contact Details */}
         <div className="lg:col-span-5 space-y-6">
           
-          <div className="bg-[#F7F5F0] rounded-xl border border-[#E2DDD5] p-6 space-y-5 shadow-xs">
-            <h3 className="font-serif text-xl font-bold text-[#0F2C59] border-b border-[#E2DDD5] pb-3 flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-amber-600" />
+          <div className="bg-white rounded-xl border border-slate-200 p-6 space-y-5 shadow-xs">
+            <h3 className="font-serif text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-3 flex items-center gap-2">
+              <Building2 className="w-5 h-5 text-[#BF5700]" />
               Academic Contact Info
             </h3>
 
-            <div className="space-y-4 text-xs">
+            <div className="space-y-4 text-xs font-sans">
               <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#0F2C59] shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#BF5700] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-500 uppercase block tracking-wider">Email</span>
-                  <a href="mailto:v.singh@utexas.edu" className="text-[#0F2C59] font-semibold text-sm hover:underline">
+                  <a href="mailto:v.singh@utexas.edu" className="text-[#BF5700] font-semibold text-sm hover:underline">
                     v.singh@utexas.edu
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <GraduationCap className="w-4 h-4 text-[#0F2C59] shrink-0 mt-0.5" />
+                <GraduationCap className="w-4 h-4 text-[#BF5700] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-500 uppercase block tracking-wider">Academic Department</span>
                   <p className="text-slate-800 text-sm font-medium">College of Natural Sciences</p>
@@ -164,7 +164,7 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#0F2C59] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#BF5700] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-500 uppercase block tracking-wider">Location</span>
                   <p className="text-slate-800 text-sm font-medium">Austin, Texas • UT Austin Campus</p>
@@ -174,9 +174,9 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Student Advising Notice */}
-          <div className="bg-[#0F2C59] text-white rounded-xl p-6 space-y-3 shadow-md">
+          <div className="bg-[#0F172A] text-white rounded-xl p-6 space-y-3 shadow-md border border-slate-800">
             <div className="flex items-center gap-2 text-amber-300 font-serif font-bold text-base">
-              <Clock className="w-5 h-5" />
+              <Clock className="w-5 h-5 text-[#BF5700]" />
               UT Austin Student & Advising Support
             </div>
             <p className="text-xs text-slate-200 leading-relaxed">

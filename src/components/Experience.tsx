@@ -129,10 +129,10 @@ export const Experience: React.FC = () => {
       
       {/* Header */}
       <div className="border-b border-slate-200 pb-6 space-y-3">
-        <span className="text-xs font-semibold uppercase tracking-wider text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+        <span className="text-xs font-semibold uppercase tracking-wider text-[#993F00] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
           Clinical, Public Health & Community Experience
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0A192F] tracking-tight">
+        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#0F172A] tracking-tight">
           My Healthcare Journey
         </h1>
         <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed max-w-3xl">
@@ -145,8 +145,8 @@ export const Experience: React.FC = () => {
             onClick={() => setFilter('all')}
             className={`px-3.5 py-1.5 rounded-md text-xs font-semibold tracking-wide transition-colors ${
               filter === 'all'
-                ? 'bg-[#0A192F] text-white'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             All Experiences ({experiences.length})
@@ -155,8 +155,8 @@ export const Experience: React.FC = () => {
             onClick={() => setFilter('clinical')}
             className={`px-3.5 py-1.5 rounded-md text-xs font-semibold tracking-wide transition-colors ${
               filter === 'clinical'
-                ? 'bg-[#0A192F] text-white'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Clinical Care & Rehabilitation
@@ -165,8 +165,8 @@ export const Experience: React.FC = () => {
             onClick={() => setFilter('hospice')}
             className={`px-3.5 py-1.5 rounded-md text-xs font-semibold tracking-wide transition-colors ${
               filter === 'hospice'
-                ? 'bg-[#0A192F] text-white'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Hospice & Patient Support
@@ -175,8 +175,8 @@ export const Experience: React.FC = () => {
             onClick={() => setFilter('public-health')}
             className={`px-3.5 py-1.5 rounded-md text-xs font-semibold tracking-wide transition-colors ${
               filter === 'public-health'
-                ? 'bg-[#0A192F] text-white'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Public Health & Epidemiology
@@ -185,8 +185,8 @@ export const Experience: React.FC = () => {
             onClick={() => setFilter('crisis')}
             className={`px-3.5 py-1.5 rounded-md text-xs font-semibold tracking-wide transition-colors ${
               filter === 'crisis'
-                ? 'bg-[#0A192F] text-white'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-[#BF5700] text-white shadow-xs'
+                : 'bg-white text-slate-700 hover:bg-orange-50 hover:text-[#BF5700] border border-slate-200'
             }`}
           >
             Crisis Services
@@ -201,18 +201,18 @@ export const Experience: React.FC = () => {
           return (
             <div
               key={exp.id}
-              className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 hover:border-[#0A192F] transition-all shadow-xs space-y-4"
+              className="bg-white rounded-xl border border-slate-200 p-6 sm:p-8 hover:border-[#BF5700] transition-all shadow-xs space-y-4"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#0A192F] text-white flex items-center justify-center shrink-0">
-                    <IconComponent className="w-5 h-5 text-sky-300" />
+                  <div className="w-10 h-10 rounded-lg bg-[#BF5700] text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <IconComponent className="w-5 h-5 text-amber-200" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0A192F]">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F172A]">
                       {exp.title}
                     </h3>
-                    <span className="text-xs font-semibold text-blue-900 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200 inline-block mt-1">
+                    <span className="text-xs font-semibold text-[#993F00] bg-orange-50 px-2.5 py-0.5 rounded border border-orange-200 inline-block mt-1">
                       {exp.categoryLabel}
                     </span>
                   </div>
@@ -227,7 +227,7 @@ export const Experience: React.FC = () => {
               <ul className="space-y-2 text-sm text-slate-700 font-sans">
                 {exp.bullets.map((bullet, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#BF5700] shrink-0 mt-0.5" />
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -240,7 +240,7 @@ export const Experience: React.FC = () => {
       {/* What I Hope to Explore Next Section */}
       <section className="bg-white rounded-xl border border-slate-200 p-8 space-y-6 shadow-xs">
         <div className="border-b border-slate-200 pb-3">
-          <h2 className="font-serif text-2xl font-bold text-[#0A192F]">
+          <h2 className="font-serif text-2xl font-bold text-[#0F172A]">
             What I Hope to Explore Next
           </h2>
           <p className="text-xs text-slate-600 font-sans mt-1">
@@ -249,8 +249,8 @@ export const Experience: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-700 font-sans">
-          <div className="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-2">
-            <h3 className="font-serif font-bold text-sm text-[#0A192F]">Clinical Care</h3>
+          <div className="bg-orange-50/40 p-5 rounded-lg border border-orange-200 space-y-2">
+            <h3 className="font-serif font-bold text-sm text-[#BF5700]">Clinical Care</h3>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Continue volunteering in hospitals and clinical settings.</li>
               <li>Seek opportunities that provide meaningful interaction with patients and healthcare professionals.</li>
@@ -258,8 +258,8 @@ export const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-2">
-            <h3 className="font-serif font-bold text-sm text-[#0A192F]">Physician Shadowing</h3>
+          <div className="bg-orange-50/40 p-5 rounded-lg border border-orange-200 space-y-2">
+            <h3 className="font-serif font-bold text-sm text-[#BF5700]">Physician Shadowing</h3>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Shadow physicians across different specialties and practice environments.</li>
               <li>Learn how physicians approach clinical decision-making, patient communication, and interdisciplinary care.</li>
@@ -267,8 +267,8 @@ export const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-2">
-            <h3 className="font-serif font-bold text-sm text-[#0A192F]">Research</h3>
+          <div className="bg-orange-50/40 p-5 rounded-lg border border-orange-200 space-y-2">
+            <h3 className="font-serif font-bold text-sm text-[#BF5700]">Research</h3>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Continue developing my biomedical research skills.</li>
               <li>Explore research questions related to surgery, aging, physiology, health disparities, and patient outcomes.</li>
@@ -276,8 +276,8 @@ export const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-2">
-            <h3 className="font-serif font-bold text-sm text-[#0A192F]">Public Health & Health Equity</h3>
+          <div className="bg-orange-50/40 p-5 rounded-lg border border-orange-200 space-y-2">
+            <h3 className="font-serif font-bold text-sm text-[#BF5700]">Public Health & Health Equity</h3>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Continue working with communities that experience barriers to healthcare access.</li>
               <li>Learn more about rural healthcare and the structural factors contributing to disparities in health outcomes.</li>
@@ -289,14 +289,14 @@ export const Experience: React.FC = () => {
 
       {/* Timeline Section */}
       <section className="bg-white rounded-xl border border-slate-200 p-8 space-y-6 shadow-xs">
-        <h2 className="font-serif text-2xl font-bold text-[#0A192F] border-b border-slate-200 pb-3 flex items-center gap-2">
-          <Clock className="w-5 h-5 text-blue-900" />
+        <h2 className="font-serif text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3 flex items-center gap-2">
+          <Clock className="w-5 h-5 text-[#BF5700]" />
           Timeline & Future Directions
         </h2>
 
         <div className="space-y-6 font-sans text-xs text-slate-700">
-          <div className="border-l-2 border-[#0A192F] pl-4 space-y-1">
-            <span className="font-bold text-sm text-[#0A192F] font-serif block">Fall 2026 – Spring 2027</span>
+          <div className="border-l-2 border-[#BF5700] pl-4 space-y-1">
+            <span className="font-bold text-sm text-[#BF5700] font-serif block">Fall 2026 – Spring 2027</span>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Continue clinical, hospice, crisis services, and community-based experiences.</li>
               <li>Grow in my role as an Immunology Lab Teaching Assistant.</li>
@@ -306,8 +306,8 @@ export const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="border-l-2 border-blue-600 pl-4 space-y-1">
-            <span className="font-bold text-sm text-[#0A192F] font-serif block">Summer 2027</span>
+          <div className="border-l-2 border-amber-600 pl-4 space-y-1">
+            <span className="font-bold text-sm text-slate-900 font-serif block">Summer 2027</span>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Pursue a clinical, biomedical research, or public health opportunity that deepens my interests.</li>
               <li>Continue exploring medicine outside of the traditional classroom environment.</li>
@@ -315,8 +315,8 @@ export const Experience: React.FC = () => {
             </ul>
           </div>
 
-          <div className="border-l-2 border-emerald-600 pl-4 space-y-1">
-            <span className="font-bold text-sm text-[#0A192F] font-serif block">Beyond 2027</span>
+          <div className="border-l-2 border-slate-900 pl-4 space-y-1">
+            <span className="font-bold text-sm text-slate-900 font-serif block">Beyond 2027</span>
             <ul className="list-disc list-inside space-y-1 text-slate-600">
               <li>Continue building clinical and research experience before medical school.</li>
               <li>Develop a clearer understanding of the specialty and communities I hope to serve.</li>
@@ -327,8 +327,8 @@ export const Experience: React.FC = () => {
       </section>
 
       {/* Reflection Box */}
-      <section className="bg-[#0A192F] text-white rounded-xl p-8 space-y-4 shadow-md text-left">
-        <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+      <section className="bg-[#0F172A] text-white rounded-xl p-8 space-y-4 shadow-md text-left border border-slate-800">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#BF5700]">
           Reflection on Healthcare
         </span>
         <blockquote className="font-serif text-lg sm:text-xl italic leading-relaxed text-slate-100">
